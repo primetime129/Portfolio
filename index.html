@@ -1,0 +1,3948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdelrahman Ibrahim | AI Engineer &amp; Data-Driven Problem Solver</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Emoji Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
+    <style>
+/* PROFESSIONAL EXECUTIVE BACKGROUND SYSTEM */
+#main-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#mesh-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.3;
+}
+:root {
+  /* Primitive Color Tokens */
+  --color-white: rgba(255, 255, 255, 1);
+  --color-black: rgba(0, 0, 0, 1);
+  --color-cream-50: rgba(252, 252, 249, 1);
+  --color-cream-100: rgba(255, 255, 253, 1);
+  --color-gray-200: rgba(245, 245, 245, 1);
+  --color-gray-300: rgba(167, 169, 169, 1);
+  --color-gray-400: rgba(119, 124, 124, 1);
+  --color-slate-500: rgba(98, 108, 113, 1);
+  --color-brown-600: rgba(94, 82, 64, 1);
+  --color-charcoal-700: rgba(31, 33, 33, 1);
+  --color-charcoal-800: rgba(38, 40, 40, 1);
+  --color-slate-900: rgba(19, 52, 59, 1);
+  --color-teal-300: rgba(50, 184, 198, 1);
+  --color-teal-400: rgba(45, 166, 178, 1);
+  --color-teal-500: rgba(33, 128, 141, 1);
+  --color-teal-600: rgba(29, 116, 128, 1);
+  --color-teal-700: rgba(26, 104, 115, 1);
+  --color-teal-800: rgba(41, 150, 161, 1);
+  --color-red-400: rgba(255, 84, 89, 1);
+  --color-red-500: rgba(192, 21, 47, 1);
+  --color-orange-400: rgba(230, 129, 97, 1);
+  --color-orange-500: rgba(168, 75, 47, 1);
+
+  /* Professional Executive Color Palette */
+  --color-carbon-black: #0d1117;
+  --color-charcoal: #1a1d23;
+  --color-slate-gray: #404856;
+  --color-deep-teal: #0d5f6f;
+  --color-steel-blue: #1a5f7a;
+  --color-brushed-gold: #8b7355;
+  --color-silver: #c0c0c0;
+  --color-navy-professional: #0a0e1a;
+  --color-corporate-blue: #1e3a5f;
+
+  /* RGB versions for opacity control */
+  --color-brown-600-rgb: 94, 82, 64;
+  --color-teal-500-rgb: 33, 128, 141;
+  --color-slate-900-rgb: 19, 52, 59;
+  --color-slate-500-rgb: 98, 108, 113;
+  --color-red-500-rgb: 192, 21, 47;
+  --color-red-400-rgb: 255, 84, 89;
+  --color-orange-500-rgb: 168, 75, 47;
+  --color-orange-400-rgb: 230, 129, 97;
+  --color-purple-500-rgb: 147, 51, 234;
+  --color-cyan-400-rgb: 34, 211, 238;
+  --color-blue-500-rgb: 59, 130, 246;
+
+  /* Background color tokens */
+  --color-bg-1: rgba(59, 130, 246, 0.08);
+  --color-bg-2: rgba(245, 158, 11, 0.08);
+  --color-bg-3: rgba(34, 197, 94, 0.08);
+  --color-bg-4: rgba(239, 68, 68, 0.08);
+  --color-bg-5: rgba(147, 51, 234, 0.08);
+  --color-bg-6: rgba(249, 115, 22, 0.08);
+  --color-bg-7: rgba(236, 72, 153, 0.08);
+  --color-bg-8: rgba(6, 182, 212, 0.08);
+
+  /* Semantic Color Tokens */
+  --color-background: var(--color-carbon-black);
+  --color-surface: rgba(255, 255, 255, 0.02);
+  --color-text: #e8e8e8;
+  --color-text-secondary: #a0a0a0;
+  --color-primary: var(--color-deep-teal);
+  --color-primary-hover: var(--color-steel-blue);
+  --color-primary-active: #0a4a56;
+  --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-btn-primary-text: var(--color-slate-900);
+  --color-card-border: rgba(255, 255, 255, 0.1);
+  --color-card-border-inner: rgba(255, 255, 255, 0.05);
+  --color-error: var(--color-red-500);
+  --color-success: var(--color-teal-500);
+  --color-warning: var(--color-orange-500);
+  --color-info: var(--color-slate-500);
+  --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+  --color-select-caret: rgba(var(--color-slate-900-rgb), 0.8);
+
+  /* Typography */
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-heading: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-2xl: 20px;
+  --font-size-3xl: 24px;
+  --font-size-4xl: 30px;
+  --font-size-5xl: 48px;
+  --font-size-6xl: 60px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 550;
+  --font-weight-bold: 600;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --letter-spacing-tight: -0.01em;
+
+  /* Spacing */
+  --space-0: 0;
+  --space-1: 1px;
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-80: 80px;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-base: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows - Refined */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  --shadow-professional: 0 8px 30px rgba(0, 0, 0, 0.3);
+  --shadow-elevated: 0 12px 40px rgba(0, 0, 0, 0.4);
+  --shadow-focus: 0 0 0 3px rgba(13, 95, 111, 0.3);
+
+  /* Animation */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 500ms;
+  --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: var(--font-size-base);
+}
+
+/* Ensure smooth scrolling with offset for fixed header */
+section {
+  scroll-margin-top: 80px;
+}
+
+body {
+  font-family: var(--font-family-base);
+  background: var(--color-background);
+  color: var(--color-text);
+  line-height: var(--line-height-normal);
+  overflow-x: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-heading);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+/* Animated Background */
+.animated-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  animation: backgroundPulse 40s ease-in-out infinite;
+}
+
+@keyframes backgroundPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.95; }
+}
+
+/* Animated Light Sources */
+.animated-light {
+  background: radial-gradient(circle, rgba(13, 95, 111, 0.06), transparent);
+  animation: lightFloat 35s ease-in-out infinite;
+  filter: blur(80px);
+}
+
+@keyframes lightFloat {
+  0%, 100% { 
+    transform: translate(0, 0) scale(1);
+    opacity: 0.18;
+  }
+  25% { 
+    transform: translate(40px, -50px) scale(1.15);
+    opacity: 0.28;
+  }
+  50% { 
+    transform: translate(-30px, -70px) scale(1.2);
+    opacity: 0.35;
+  }
+  75% { 
+    transform: translate(-50px, 40px) scale(1.12);
+    opacity: 0.25;
+  }
+}
+
+/* Pulsing Orb Animation */
+.pulsing-orb {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 1;
+  }
+}
+
+/* Animated Gradient Background */
+.animated-bg {
+  background: linear-gradient(135deg, 
+    var(--color-carbon-black) 0%, 
+    rgba(13, 95, 111, 0.15) 25%,
+    rgba(26, 95, 122, 0.12) 50%,
+    rgba(64, 72, 86, 0.15) 75%,
+    var(--color-carbon-black) 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 40s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 75%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 25%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Animated Business Metric Lines */
+@keyframes drawLine {
+  0% {
+    stroke-dashoffset: 1000;
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0.3;
+  }
+}
+
+/* Animated Data Bars Growing */
+@keyframes barGrow {
+  0%, 100% {
+    transform: scaleY(0.5);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 0.7;
+  }
+}
+
+/* Animated Strategic Indicators */
+@keyframes indicatorMove {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    transform: translateY(-15px) scale(1.05);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.02);
+  }
+  75% {
+    transform: translateY(-12px) scale(1.03);
+  }
+}
+
+/* Animated Network Connections */
+@keyframes connectionPulse {
+  0%, 100% {
+    opacity: 0.2;
+    stroke-width: 1;
+  }
+  50% {
+    opacity: 0.6;
+    stroke-width: 2.5;
+  }
+}
+
+/* Animated Growth Chart */
+@keyframes chartDraw {
+  0% {
+    stroke-dashoffset: 500;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Animated Shape Rotation */
+@keyframes shapeRotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+/* Animated Wave Flow */
+@keyframes waveFlow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}
+
+/* Cursor Glow Effect */
+.cursor-glow {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(139, 115, 85, 0.15), transparent);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+  z-index: 9998;
+  filter: blur(40px);
+  opacity: 0;
+}
+
+.cursor-trail {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: trailFade 0.8s ease-out forwards;
+  z-index: 9997;
+}
+
+@keyframes trailFade {
+  0% {
+    opacity: 0.6;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.3);
+  }
+}
+
+.gradient-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.15;
+  animation: float 35s infinite ease-in-out, orbPulse 8s ease-in-out infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes orbPulse {
+  0%, 100% {
+    opacity: 0.15;
+    filter: blur(120px);
+  }
+  50% {
+    opacity: 0.25;
+    filter: blur(100px);
+  }
+}
+
+.orb-1 {
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(13, 95, 111, 0.25), rgba(26, 95, 122, 0.15), transparent);
+  top: -200px;
+  left: -200px;
+  box-shadow: 0 0 120px rgba(13, 95, 111, 0.4);
+  animation-duration: 30s;
+}
+
+.orb-2 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(64, 72, 86, 0.2), rgba(26, 29, 35, 0.12), transparent);
+  bottom: -150px;
+  right: -150px;
+  animation-delay: 10s;
+  box-shadow: 0 0 120px rgba(64, 72, 86, 0.3);
+  animation-duration: 32s;
+}
+
+.orb-3 {
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(26, 95, 122, 0.22), rgba(30, 58, 95, 0.14), transparent);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-delay: 20s;
+  box-shadow: 0 0 110px rgba(26, 95, 122, 0.3);
+  animation-duration: 28s;
+}
+
+.orb-4 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(139, 115, 85, 0.2), transparent);
+  top: 30%;
+  right: 10%;
+  animation-delay: 15s;
+  box-shadow: 0 0 110px rgba(139, 115, 85, 0.3);
+  animation-duration: 34s;
+}
+
+.orb-5 {
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(192, 192, 192, 0.18), transparent);
+  bottom: 30%;
+  left: 20%;
+  animation-delay: 25s;
+  box-shadow: 0 0 100px rgba(192, 192, 192, 0.25);
+  animation-duration: 36s;
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translate(0, 0) scale(1) rotate(0deg); 
+  }
+  25% { 
+    transform: translate(30px, -35px) scale(1.08) rotate(5deg); 
+  }
+  50% { 
+    transform: translate(25px, -25px) scale(1.12) rotate(-5deg); 
+  }
+  75% { 
+    transform: translate(-25px, 30px) scale(1.06) rotate(3deg); 
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatTech {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-20px) rotate(5deg); }
+  50% { transform: translateY(-10px) rotate(-5deg); }
+  75% { transform: translateY(-15px) rotate(3deg); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Stylish Navigation Bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background: linear-gradient(135deg, rgba(13, 17, 23, 0.95) 0%, rgba(26, 29, 35, 0.92) 100%);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(139, 115, 85, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+  transition: all var(--duration-normal) var(--ease-standard);
+}
+
+.navbar::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(139, 115, 85, 0.4), transparent);
+  opacity: 0.6;
+}
+
+.navbar.scrolled {
+  background: linear-gradient(135deg, rgba(13, 17, 23, 0.98) 0%, rgba(26, 29, 35, 0.96) 100%);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.7);
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--space-20) var(--space-32);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-heading);
+  color: #ffffff;
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-standard);
+  text-decoration: none;
+  position: relative;
+}
+
+.logo-icon {
+  font-size: var(--font-size-3xl);
+  filter: drop-shadow(0 0 3px rgba(139, 115, 85, 0.3));
+  animation: logoBreathing 4s ease-in-out infinite;
+  display: inline-block;
+}
+
+@keyframes logoBreathing {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    filter: drop-shadow(0 0 3px rgba(139, 115, 85, 0.3));
+  }
+  50% {
+    transform: scale(1.08) rotate(2deg);
+    filter: drop-shadow(0 0 8px rgba(139, 115, 85, 0.5));
+  }
+}
+
+.logo-text {
+  background: linear-gradient(135deg, #ffffff 0%, var(--color-silver) 50%, var(--color-brushed-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.navbar-logo:hover .logo-icon {
+  transform: scale(1.1) rotate(5deg);
+  animation: none;
+}
+
+.navbar-logo:hover .logo-text {
+  text-shadow: 0 0 20px rgba(139, 115, 85, 0.6);
+}
+
+.navbar-logo::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-deep-teal), var(--color-brushed-gold));
+  transition: width var(--duration-normal) var(--ease-standard);
+  border-radius: var(--radius-full);
+}
+
+.navbar-logo:hover::after {
+  width: 100%;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+  display: flex;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.nav-link {
+  position: relative;
+  padding: var(--space-10) var(--space-20);
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
+  border-radius: var(--radius-base);
+  transition: all var(--duration-normal) var(--ease-standard);
+  cursor: pointer;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-deep-teal), var(--color-brushed-gold));
+  transition: width var(--duration-normal) var(--ease-standard);
+  border-radius: var(--radius-full);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-base);
+  background: rgba(139, 115, 85, 0.08);
+  opacity: 0;
+  transition: opacity var(--duration-normal) var(--ease-standard);
+}
+
+.nav-link:hover {
+  color: var(--color-brushed-gold);
+  transform: translateY(-1px);
+}
+
+.nav-link:hover::before {
+  width: 80%;
+}
+
+.nav-link:hover::after {
+  opacity: 1;
+}
+
+.nav-link:active {
+  transform: translateY(0);
+}
+
+/* Hamburger Button */
+.hamburger-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 32px;
+  height: 28px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+  position: relative;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 3px;
+  background: var(--color-brushed-gold);
+  border-radius: var(--radius-full);
+  transition: all var(--duration-normal) var(--ease-standard);
+}
+
+.hamburger-btn:hover .hamburger-line {
+  background: #00c4e6;
+}
+
+.hamburger-btn.active .hamburger-line:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger-btn.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.hamburger-btn.active .hamburger-line:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Menu Backdrop */
+.menu-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--duration-normal) var(--ease-standard);
+  z-index: 997;
+}
+
+.menu-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 320px;
+  max-width: 85vw;
+  height: 100vh;
+  background: linear-gradient(180deg, rgba(10, 14, 26, 0.98) 0%, rgba(19, 52, 59, 0.95) 100%);
+  backdrop-filter: blur(20px);
+  box-shadow: -10px 0 50px rgba(0, 0, 0, 0.8), 0 0 60px rgba(0, 255, 255, 0.2);
+  transition: right var(--duration-slow) var(--ease-standard);
+  z-index: 998;
+  overflow-y: auto;
+  border-left: 2px solid rgba(0, 255, 255, 0.5);
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-24) var(--space-24) var(--space-16);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-brushed-gold);
+  font-family: var(--font-family-heading);
+}
+
+.close-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-size: var(--font-size-2xl);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-base);
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-standard);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  background: rgba(139, 115, 85, 0.2);
+  border-color: var(--color-brushed-gold);
+  color: var(--color-brushed-gold);
+  transform: rotate(90deg);
+}
+
+.mobile-menu-links {
+  padding: var(--space-16) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  padding: var(--space-16) var(--space-24);
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  transition: all var(--duration-normal) var(--ease-standard);
+  position: relative;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.mobile-menu.open .mobile-nav-link {
+  animation: slideInMenu 0.4s var(--ease-standard) forwards;
+}
+
+.mobile-menu.open .mobile-nav-link:nth-child(1) { animation-delay: 0.05s; }
+.mobile-menu.open .mobile-nav-link:nth-child(2) { animation-delay: 0.1s; }
+.mobile-menu.open .mobile-nav-link:nth-child(3) { animation-delay: 0.15s; }
+.mobile-menu.open .mobile-nav-link:nth-child(4) { animation-delay: 0.2s; }
+.mobile-menu.open .mobile-nav-link:nth-child(5) { animation-delay: 0.25s; }
+.mobile-menu.open .mobile-nav-link:nth-child(6) { animation-delay: 0.3s; }
+
+@keyframes slideInMenu {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-nav-link::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 70%;
+  background: linear-gradient(180deg, var(--color-deep-teal), var(--color-brushed-gold));
+  transition: width var(--duration-normal) var(--ease-standard);
+  border-radius: 0 var(--radius-base) var(--radius-base) 0;
+}
+
+.mobile-nav-link:hover {
+  color: var(--color-brushed-gold);
+  background: rgba(139, 115, 85, 0.12);
+  transform: translateX(8px);
+}
+
+.mobile-nav-link:hover::before {
+  width: 4px;
+}
+
+.mobile-nav-icon {
+  font-size: var(--font-size-2xl);
+  transition: all var(--duration-normal) var(--ease-standard);
+}
+
+.mobile-nav-link:hover .mobile-nav-icon {
+  transform: scale(1.1);
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+  
+  .hamburger-btn {
+    display: flex;
+  }
+  
+  .navbar-container {
+    padding: var(--space-12) var(--space-16);
+  }
+  
+  .logo-text {
+    font-size: var(--font-size-sm);
+  }
+  
+  .logo-icon {
+    font-size: var(--font-size-lg);
+  }
+  
+  .hamburger-btn {
+    width: 26px;
+    height: 22px;
+  }
+  
+  .hamburger-line {
+    height: 2px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar-container {
+    padding: var(--space-10) var(--space-16);
+  }
+  
+  .logo-text {
+    font-size: var(--font-size-xs);
+  }
+  
+  .logo-icon {
+    font-size: var(--font-size-base);
+  }
+  
+  .hamburger-btn {
+    width: 24px;
+    height: 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu,
+  .menu-backdrop {
+    display: none;
+  }
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-80) var(--space-32);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.floating-tech {
+  position: absolute;
+  font-size: 2rem;
+  opacity: 0.15;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+}
+
+.floating-tech:nth-child(1) {
+  top: 15%;
+  left: 10%;
+  animation: floatTech 6s ease-in-out infinite;
+}
+
+.floating-tech:nth-child(2) {
+  top: 25%;
+  right: 15%;
+  animation: floatTech 7s ease-in-out infinite 1s;
+}
+
+.floating-tech:nth-child(3) {
+  bottom: 20%;
+  left: 15%;
+  animation: floatTech 8s ease-in-out infinite 2s;
+}
+
+.floating-tech:nth-child(4) {
+  bottom: 30%;
+  right: 10%;
+  animation: floatTech 7s ease-in-out infinite 1.5s;
+}
+
+.floating-tech:nth-child(5) {
+  top: 40%;
+  left: 5%;
+  animation: floatTech 9s ease-in-out infinite 0.5s;
+}
+
+.floating-tech:nth-child(6) {
+  top: 50%;
+  right: 8%;
+  animation: floatTech 6.5s ease-in-out infinite 2.5s;
+}
+
+.hero-content {
+  max-width: 900px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-label {
+  display: inline-block;
+  padding: var(--space-8) var(--space-20);
+  background: rgba(139, 115, 85, 0.1);
+  border: 1px solid rgba(139, 115, 85, 0.3);
+  border-radius: var(--radius-full);
+  color: var(--color-brushed-gold);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-24);
+  animation: fadeInUp 0.8s var(--ease-standard);
+  position: relative;
+  z-index: 10;
+}
+
+.hero-title {
+  font-size: var(--font-size-6xl);
+  margin-bottom: var(--space-24);
+  background: linear-gradient(135deg, #ffffff 0%, var(--color-silver) 50%, var(--color-brushed-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: fadeInUp 0.8s var(--ease-standard) 0.2s both;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-subtitle {
+  font-size: var(--font-size-2xl);
+  color: #d1d1d1;
+  margin-bottom: var(--space-32);
+  animation: fadeInUp 0.8s var(--ease-standard) 0.4s both;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-metrics {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-16);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-48);
+  animation: fadeInUp 0.8s var(--ease-standard) 0.6s both;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-20) var(--space-24);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s var(--ease-standard);
+  position: relative;
+  z-index: 10;
+  min-width: 140px;
+  text-align: center;
+  animation: fadeInUp 0.8s var(--ease-standard) both;
+  opacity: 0;
+}
+
+.hero-metric:nth-child(1) { animation-delay: 0.7s; }
+.hero-metric:nth-child(2) { animation-delay: 0.8s; }
+.hero-metric:nth-child(3) { animation-delay: 0.9s; }
+.hero-metric:nth-child(4) { animation-delay: 1s; }
+.hero-metric:nth-child(5) { animation-delay: 1.1s; }
+.hero-metric:nth-child(6) { animation-delay: 1.2s; }
+
+.hero-metric:hover {
+  background: rgba(139, 115, 85, 0.12);
+  border-color: var(--color-brushed-gold);
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(139, 115, 85, 0.3);
+}
+
+.hero-metric::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(135deg, rgba(13, 95, 111, 0.3), rgba(139, 115, 85, 0.3));
+  border-radius: var(--radius-lg);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+  filter: blur(10px);
+}
+
+.hero-metric:hover::before {
+  opacity: 1;
+}
+
+.metric-value {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-brushed-gold);
+  font-family: var(--font-family-heading);
+  line-height: 1.2;
+  margin-bottom: var(--space-8);
+}
+
+.metric-label {
+  font-size: var(--font-size-sm);
+  color: #c0c0c0;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  line-height: 1.4;
+}
+
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-12);
+  padding: var(--space-16) var(--space-40);
+  background: linear-gradient(135deg, var(--color-deep-teal) 0%, var(--color-steel-blue) 100%);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  color: #ffffff;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-lg);
+  border: none;
+  border-radius: var(--radius-base);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--duration-normal) var(--ease-standard);
+  animation: fadeInUp 0.8s var(--ease-standard) 0.8s both;
+  position: relative;
+  z-index: 10;
+  min-height: 44px;
+}
+
+.hero-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(135deg, var(--color-steel-blue) 0%, var(--color-deep-teal) 100%);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section Styling */
+.section {
+  padding: var(--space-80) var(--space-32);
+  position: relative;
+  z-index: 1;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+  border-radius: var(--radius-full);
+  opacity: 0.4;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-64);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.section-label {
+  display: inline-block;
+  padding: var(--space-6) var(--space-16);
+  background: rgba(107, 45, 159, 0.08);
+  border: 1px solid rgba(107, 45, 159, 0.2);
+  border-radius: var(--radius-full);
+  color: var(--color-purple-muted);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: var(--space-16);
+  position: relative;
+  z-index: 2;
+}
+
+.section-title {
+  font-size: var(--font-size-5xl);
+  margin-bottom: var(--space-16);
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+  z-index: 2;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-deep-teal), var(--color-brushed-gold), var(--color-steel-blue));
+  border-radius: var(--radius-full);
+}
+
+.section-description {
+  font-size: var(--font-size-lg);
+  color: #b8b8b8;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* About Section */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-64);
+  align-items: center;
+}
+
+.about-image {
+  position: relative;
+}
+
+.about-image-placeholder {
+  width: 100%;
+  max-width: 250px;
+  height: 250px;
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.2) 0%, rgba(147, 51, 234, 0.2) 100%);
+  border-radius: var(--radius-2xl);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-6xl);
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  margin: 0 auto;
+  transition: all var(--duration-normal) var(--ease-standard);
+}
+
+.about-image-placeholder:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  border-color: var(--color-brushed-gold);
+}
+
+/* Professional Photo Styling */
+.about-image-photo {
+  width: 100%;
+  max-width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: var(--radius-2xl);
+  border: 3px solid rgba(139, 115, 85, 0.4);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 40px rgba(139, 115, 85, 0.2);
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  display: block;
+  transition: all var(--duration-normal) var(--ease-standard);
+  animation: fadeInUp 0.8s var(--ease-standard);
+}
+
+.about-image-photo:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6), 0 0 80px rgba(139, 115, 85, 0.5);
+  border-color: var(--color-brushed-gold);
+}
+
+.about-image-photo {
+  animation: photoGlow 3s ease-in-out infinite;
+}
+
+@keyframes photoGlow {
+  0%, 100% {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 40px rgba(139, 115, 85, 0.2);
+  }
+  50% {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4), 0 0 60px rgba(139, 115, 85, 0.4);
+  }
+}
+
+
+
+.about-text h3 {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--space-16);
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+
+.about-text p {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-32);
+  line-height: 1.7;
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-16);
+  align-items: stretch;
+}
+
+.stat-card {
+  padding: var(--space-20);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-lg);
+  transition: all var(--duration-normal) var(--ease-standard);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100px;
+}
+
+.stat-card:hover {
+  background: rgba(139, 115, 85, 0.08);
+  border-color: var(--color-brushed-gold);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.stat-value {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-brushed-gold);
+  font-family: var(--font-family-heading);
+  margin-bottom: var(--space-4);
+}
+
+.stat-label {
+  font-size: var(--font-size-sm);
+  color: #b8b8b8;
+  position: relative;
+  z-index: 2;
+}
+
+.languages {
+  display: flex;
+  gap: var(--space-12);
+  margin-top: var(--space-24);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.language-badge {
+  padding: var(--space-8) var(--space-16);
+  background: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  color: var(--color-blue-500);
+}
+
+/* Experience Section */
+.timeline {
+  position: relative;
+  padding-left: var(--space-40);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-32);
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, var(--color-primary), transparent);
+  opacity: 0.5;
+}
+
+.timeline-item {
+  position: relative;
+  padding: var(--space-24);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-lg);
+  transition: all 0.4s var(--ease-standard);
+  z-index: 2;
+  width: 100%;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-item.reveal-active {
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideInLeft 0.6s var(--ease-standard) forwards;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -52px;
+  top: var(--space-32);
+  width: 14px;
+  height: 14px;
+  background: var(--color-brushed-gold);
+  border-radius: 50%;
+  border: 3px solid var(--color-background);
+}
+
+.timeline-item:hover {
+  background: rgba(139, 115, 85, 0.1);
+  border-color: var(--color-brushed-gold);
+  transform: translateX(10px) scale(1.01);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), -4px 0 20px rgba(139, 115, 85, 0.2);
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  background: linear-gradient(180deg, rgba(13, 95, 111, 0.2), rgba(139, 115, 85, 0.2));
+  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+  transition: width 0.4s var(--ease-standard);
+  z-index: -1;
+}
+
+.timeline-item:hover::after {
+  width: 6px;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-16);
+  flex-wrap: wrap;
+  gap: var(--space-12);
+}
+
+.timeline-role {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-company {
+  font-size: var(--font-size-lg);
+  color: var(--color-brushed-gold);
+  margin-bottom: var(--space-4);
+  font-weight: var(--font-weight-semibold);
+}
+
+.timeline-date {
+  font-size: var(--font-size-sm);
+  color: #b0b0b0;
+  padding: var(--space-4) var(--space-12);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-achievements {
+  list-style: none;
+}
+
+.timeline-achievements li {
+  position: relative;
+  padding-left: var(--space-24);
+  margin-bottom: var(--space-12);
+  color: #b8b8b8;
+  line-height: 1.6;
+  z-index: 2;
+}
+
+.timeline-achievements li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--color-deep-teal);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Skills Section */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-24);
+  align-items: stretch;
+}
+
+@media (max-width: 640px) {
+
+}
+
+.skill-category {
+  padding: var(--space-24);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-lg);
+  transition: all var(--duration-normal) var(--ease-standard);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.skill-category:hover {
+  background: rgba(139, 115, 85, 0.1);
+  border-color: var(--color-brushed-gold);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4), 0 0 30px rgba(139, 115, 85, 0.2);
+}
+
+.skill-category::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(13, 95, 111, 0.1), rgba(139, 115, 85, 0.1));
+  border-radius: var(--radius-lg);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.skill-category:hover::before {
+  opacity: 1;
+}
+
+.skill-category-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: #ffffff;
+  margin-bottom: var(--space-20);
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  position: relative;
+  z-index: 2;
+}
+
+.skill-category-icon {
+  font-size: var(--font-size-2xl);
+  display: inline-block;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.skill-tag {
+  padding: var(--space-6) var(--space-12);
+  background: rgba(26, 95, 122, 0.12);
+  border: 1px solid rgba(26, 95, 122, 0.3);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-steel-blue);
+  transition: all var(--duration-fast) var(--ease-standard);
+}
+
+.skill-tag:hover {
+  background: rgba(26, 95, 122, 0.2);
+  transform: scale(1.05);
+  border-color: var(--color-steel-blue);
+}
+
+/* Education Section */
+.education-card {
+  padding: var(--space-32);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-xl);
+  margin-bottom: var(--space-48);
+  text-align: center;
+  transition: all var(--duration-normal) var(--ease-standard);
+  position: relative;
+  z-index: 2;
+}
+
+.education-card:hover {
+  background: rgba(139, 115, 85, 0.06);
+  border-color: var(--color-brushed-gold);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.education-icon {
+  font-size: 48px;
+  margin-bottom: var(--space-16);
+  display: inline-block;
+}
+
+.education-degree {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  color: #ffffff;
+  margin-bottom: var(--space-8);
+  position: relative;
+  z-index: 2;
+}
+
+.education-school {
+  font-size: var(--font-size-lg);
+  color: var(--color-primary);
+  margin-bottom: var(--space-8);
+}
+
+.education-year {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-12);
+}
+
+.education-distinction {
+  display: inline-block;
+  padding: var(--space-8) var(--space-20);
+  background: rgba(0, 217, 255, 0.08);
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  border-radius: var(--radius-full);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-sm);
+}
+
+.certifications {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cert-category {
+  padding: var(--space-24);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-lg);
+  transition: all var(--duration-normal) var(--ease-standard);
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.cert-category:hover {
+  background: rgba(139, 115, 85, 0.1);
+  border-color: var(--color-brushed-gold);
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(139, 115, 85, 0.2);
+}
+
+.cert-category {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cert-category.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeInUp 0.6s var(--ease-standard) forwards;
+}
+
+.cert-category-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: #ffffff;
+  margin-bottom: var(--space-16);
+  padding-bottom: var(--space-12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 2;
+}
+
+.cert-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.cert-list li {
+  padding: var(--space-12);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-12);
+  line-height: 1.6;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-sm);
+  transition: all var(--duration-fast) var(--ease-standard);
+}
+
+.cert-list li:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateX(4px);
+}
+
+.cert-list li::before {
+  content: '✓';
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+  flex-shrink: 0;
+  font-size: var(--font-size-lg);
+}
+
+.cert-list li strong {
+  color: var(--color-text);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Contact Section */
+.contact-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-24);
+  margin-bottom: var(--space-48);
+  align-items: stretch;
+}
+
+.contact-card {
+  padding: var(--space-32);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-lg);
+  transition: all var(--duration-normal) var(--ease-standard);
+  text-decoration: none;
+  color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-12);
+  position: relative;
+  z-index: 2;
+  min-height: 180px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.contact-card:hover {
+  background: rgba(139, 115, 85, 0.12);
+  border-color: var(--color-brushed-gold);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4), 0 0 35px rgba(139, 115, 85, 0.3);
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(13, 95, 111, 0.15), transparent);
+  border-radius: var(--radius-lg);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.contact-card:hover::before {
+  opacity: 1;
+}
+
+.contact-icon {
+  transition: transform var(--duration-normal) var(--ease-standard);
+}
+
+.contact-card:hover .contact-icon {
+  transform: scale(1.1);
+}
+
+.contact-icon {
+  font-size: var(--font-size-4xl);
+}
+
+.contact-label {
+  font-size: var(--font-size-sm);
+  color: #b0b0b0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-value {
+  font-size: var(--font-size-lg);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+  word-break: break-word;
+}
+
+/* Footer */
+.footer {
+  padding: var(--space-40) var(--space-32);
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  background: rgba(10, 14, 26, 0.8);
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 1;
+}
+
+/* Scroll Reveal Animation - ALWAYS VISIBLE */
+.reveal {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s var(--ease-standard);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-active {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  visibility: visible !important;
+}
+
+/* Ripple effect */
+.hero-cta {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  transform: scale(0);
+  animation: rippleEffect 0.6s ease-out;
+  pointer-events: none;
+}
+
+@keyframes rippleEffect {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  
+  .hero-title {
+    font-size: var(--font-size-4xl);
+  }
+  
+  .hero-metrics {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .floating-tech {
+    font-size: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .section::before {
+    width: 60px;
+  }
+  
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-40);
+  }
+  
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-12);
+  }
+  
+  .timeline {
+    padding-left: var(--space-24);
+  }
+  
+  .timeline-item::before {
+    left: -36px;
+  }
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certifications {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-methods {
+    grid-template-columns: 1fr;
+  }
+  
+  .timeline-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .timeline-role {
+    font-size: var(--font-size-lg);
+  }
+  
+  .hero-metric {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    align-items: center;
+  }
+  
+  .section-label {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .section-title {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: var(--space-64) var(--space-20);
+    min-height: auto;
+    padding-top: 100px;
+  }
+  
+  .section {
+    padding: var(--space-64) var(--space-20);
+  }
+  
+  .hero-title {
+    font-size: var(--font-size-3xl);
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle {
+    font-size: var(--font-size-lg);
+  }
+  
+  .metric-value {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .metric-label {
+    font-size: var(--font-size-xs);
+  }
+
+  .floating-tech {
+    display: none;
+  }
+
+  .navbar {
+    padding: var(--space-16) var(--space-20);
+  }
+
+  .navbar.scrolled {
+    padding: var(--space-10) var(--space-20);
+  }
+
+  .orb-1, .orb-2, .orb-3, .orb-4, .orb-5 {
+    width: 250px;
+    height: 250px;
+    filter: blur(60px);
+  }
+  
+  .floating-shape {
+    display: none;
+  }
+  
+  .section-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .timeline-item {
+    padding: var(--space-20);
+  }
+  
+  .timeline-role {
+    font-size: var(--font-size-base);
+  }
+  
+  .timeline-company {
+    font-size: var(--font-size-base);
+  }
+  
+  .skill-category {
+    padding: var(--space-20);
+  }
+  
+  .skill-category-title {
+    font-size: var(--font-size-lg);
+  }
+  
+  .cert-category {
+    padding: var(--space-20);
+  }
+  
+  .hero-cta {
+    padding: var(--space-12) var(--space-32);
+    font-size: var(--font-size-base);
+  }
+  
+  .hero-label {
+    font-size: var(--font-size-xs);
+    padding: var(--space-6) var(--space-16);
+  }
+}
+    </style>
+</head>
+<body>
+    <!-- Advanced Interactive Background System -->
+    <div class="animated-bg">
+        <!-- Animated gradient mesh -->
+        <div class="gradient-mesh"></div>
+        
+        <!-- Interactive canvas layers -->
+        <canvas id="mesh-canvas"></canvas>
+        <canvas id="main-canvas"></canvas>
+        
+        <!-- Cursor effects -->
+        <div class="cursor-glow" id="cursorGlow"></div>
+        
+        <!-- Animated Light Sources -->
+        <style>
+          .animated-light {
+            animation: lightFloat 35s ease-in-out infinite, lightPulse 6s ease-in-out infinite;
+          }
+          .animated-light:nth-child(2) {
+            animation-delay: 12s, 2s;
+          }
+          .animated-light:nth-child(3) {
+            animation-delay: 24s, 4s;
+          }
+          @keyframes lightPulse {
+            0%, 100% {
+              filter: blur(80px);
+              opacity: 0.15;
+            }
+            50% {
+              filter: blur(60px);
+              opacity: 0.3;
+            }
+          }
+        </style>
+        <div class="light-source animated-light" style="position: absolute; width: 600px; height: 600px; top: 10%; left: 15%; pointer-events: none;"></div>
+        <div class="light-source animated-light" style="position: absolute; width: 550px; height: 550px; bottom: 15%; right: 20%; pointer-events: none; animation-delay: 12s;"></div>
+        <div class="light-source animated-light" style="position: absolute; width: 500px; height: 500px; top: 50%; left: 50%; pointer-events: none; animation-delay: 24s;"></div>
+        
+        <!-- Animated Flowing Waves -->
+        <style>
+          .flowing-waves {
+            animation: waveFloat 12s ease-in-out infinite;
+          }
+          @keyframes waveFloat {
+            0%, 100% {
+              transform: translateY(0);
+              opacity: 0.15;
+            }
+            50% {
+              transform: translateY(-20px);
+              opacity: 0.25;
+            }
+          }
+        </style>
+        <svg class="flowing-waves" style="position: absolute; bottom: 0; left: 0; width: 100%; height: 300px; opacity: 0.15; pointer-events: none;">
+          <defs>
+            <linearGradient id="waveGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:rgba(13, 95, 111, 0.6);stop-opacity:1" />
+              <stop offset="50%" style="stop-color:rgba(139, 115, 85, 0.6);stop-opacity:1" />
+              <stop offset="100%" style="stop-color:rgba(26, 95, 122, 0.6);stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <path id="wave1" d="" fill="url(#waveGradient1)" opacity="0.3"/>
+          <path id="wave2" d="" fill="url(#waveGradient1)" opacity="0.2"/>
+          <path id="wave3" d="" fill="url(#waveGradient1)" opacity="0.1"/>
+        </svg>
+        
+        <!-- Rotating Geometric Shapes -->
+        <style>
+          .rotating-shapes rect {
+            animation: shapeRotate 20s linear infinite;
+            transform-origin: center;
+          }
+          .rotating-shapes circle {
+            animation: pulseGlow 4s ease-in-out infinite, circleExpand 6s ease-in-out infinite;
+            transform-origin: center;
+          }
+          .rotating-shapes polygon {
+            animation: shapeRotate 15s linear infinite reverse;
+            transform-origin: center;
+          }
+          .rotating-shapes {
+            animation: containerFloat 25s ease-in-out infinite;
+          }
+          @keyframes circleExpand {
+            0%, 100% {
+              r: 40px;
+            }
+            50% {
+              r: 50px;
+            }
+          }
+          @keyframes containerFloat {
+            0%, 100% {
+              transform: translate(0, 0) rotate(0deg);
+            }
+            25% {
+              transform: translate(10px, -10px) rotate(5deg);
+            }
+            50% {
+              transform: translate(-5px, -15px) rotate(-5deg);
+            }
+            75% {
+              transform: translate(-10px, 5px) rotate(3deg);
+            }
+          }
+          .rotating-shapes-2 {
+            animation-delay: 8s;
+          }
+          .rotating-shapes-2 rect {
+            animation-delay: 3s;
+          }
+          .rotating-shapes-2 circle {
+            animation-delay: 2s;
+          }
+        </style>
+        <svg class="rotating-shapes rotating-shapes-1" style="position: absolute; top: 20%; right: 10%; width: 200px; height: 200px; opacity: 0.25; pointer-events: none;">
+          <rect id="rotatingRect1" x="50" y="50" width="60" height="60" fill="none" stroke="rgba(13, 95, 111, 0.6)" stroke-width="2" transform-origin="80 80"/>
+          <circle id="rotatingCircle1" cx="80" cy="80" r="40" fill="none" stroke="rgba(139, 115, 85, 0.6)" stroke-width="2"/>
+          <polygon id="rotatingPoly1" points="80,30 110,90 50,90" fill="none" stroke="rgba(26, 95, 122, 0.6)" stroke-width="2" transform-origin="80 80"/>
+        </svg>
+        
+        <svg class="rotating-shapes rotating-shapes-2" style="position: absolute; bottom: 25%; left: 8%; width: 180px; height: 180px; opacity: 0.25; pointer-events: none;">
+          <rect id="rotatingRect2" x="40" y="40" width="50" height="50" fill="none" stroke="rgba(139, 115, 85, 0.6)" stroke-width="2" transform-origin="65 65"/>
+          <circle id="rotatingCircle2" cx="65" cy="65" r="35" fill="none" stroke="rgba(26, 95, 122, 0.6)" stroke-width="2"/>
+        </svg>
+        
+        <!-- Pulsing Light Orbs -->
+        <style>
+          .pulsing-orb {
+            animation: pulseGlow 4s ease-in-out infinite, orbFloat 15s ease-in-out infinite;
+          }
+          .pulsing-orb:nth-child(2) {
+            animation-delay: 1.5s, 5s;
+          }
+          .pulsing-orb:nth-child(3) {
+            animation-delay: 3s, 10s;
+          }
+          @keyframes orbFloat {
+            0%, 100% {
+              transform: translate(0, 0);
+            }
+            25% {
+              transform: translate(20px, -20px);
+            }
+            50% {
+              transform: translate(-10px, -30px);
+            }
+            75% {
+              transform: translate(-20px, 10px);
+            }
+          }
+        </style>
+        <div class="pulsing-orb" style="position: absolute; top: 15%; left: 50%; width: 150px; height: 150px; background: radial-gradient(circle, rgba(13, 95, 111, 0.35), transparent); border-radius: 50%; filter: blur(40px); pointer-events: none;"></div>
+        <div class="pulsing-orb" style="position: absolute; bottom: 20%; right: 30%; width: 180px; height: 180px; background: radial-gradient(circle, rgba(139, 115, 85, 0.3), transparent); border-radius: 50%; filter: blur(50px); pointer-events: none; animation-delay: 1.5s;"></div>
+        <div class="pulsing-orb" style="position: absolute; top: 45%; left: 15%; width: 160px; height: 160px; background: radial-gradient(circle, rgba(26, 95, 122, 0.32), transparent); border-radius: 50%; filter: blur(45px); pointer-events: none; animation-delay: 3s;"></div>
+        
+        <!-- Professional Network Visualization -->
+        <style>
+          .neural-network circle {
+            animation: indicatorMove 4s ease-in-out infinite;
+          }
+          .neural-network circle:nth-child(2) {
+            animation-delay: 0.5s;
+          }
+          .neural-network circle:nth-child(3) {
+            animation-delay: 1s;
+          }
+          .neural-network circle:nth-child(4) {
+            animation-delay: 1.5s;
+          }
+          .neural-network circle:nth-child(5) {
+            animation-delay: 2s;
+          }
+          .neural-network line {
+            animation: connectionPulse 3s ease-in-out infinite;
+          }
+          .neural-network line:nth-child(6) {
+            animation-delay: 0.2s;
+          }
+          .neural-network line:nth-child(7) {
+            animation-delay: 0.4s;
+          }
+          .neural-network line:nth-child(8) {
+            animation-delay: 0.6s;
+          }
+          .neural-network line:nth-child(9) {
+            animation-delay: 0.8s;
+          }
+          .neural-network line:nth-child(10) {
+            animation-delay: 1s;
+          }
+          .neural-network {
+            animation: networkFloat 20s ease-in-out infinite;
+          }
+          @keyframes networkFloat {
+            0%, 100% {
+              transform: translate(0, 0);
+            }
+            50% {
+              transform: translate(15px, -15px);
+            }
+          }
+        </style>
+        <svg class="neural-network" id="neuralNet1" style="position: absolute; top: 10%; left: 5%; width: 300px; height: 300px; opacity: 0.3; pointer-events: none;">
+          <circle cx="50" cy="50" r="8" fill="rgba(13, 95, 111, 0.3)" stroke="rgba(13, 95, 111, 0.7)" stroke-width="2"/>
+          <circle cx="150" cy="80" r="8" fill="rgba(26, 95, 122, 0.3)" stroke="rgba(26, 95, 122, 0.7)" stroke-width="2"/>
+          <circle cx="250" cy="60" r="8" fill="rgba(139, 115, 85, 0.3)" stroke="rgba(139, 115, 85, 0.7)" stroke-width="2"/>
+          <circle cx="100" cy="150" r="8" fill="rgba(13, 95, 111, 0.3)" stroke="rgba(13, 95, 111, 0.7)" stroke-width="2"/>
+          <circle cx="200" cy="180" r="8" fill="rgba(26, 95, 122, 0.3)" stroke="rgba(26, 95, 122, 0.7)" stroke-width="2"/>
+          <line x1="50" y1="50" x2="150" y2="80" stroke="rgba(13, 95, 111, 0.5)" stroke-width="2"/>
+          <line x1="150" y1="80" x2="250" y2="60" stroke="rgba(26, 95, 122, 0.5)" stroke-width="2"/>
+          <line x1="50" y1="50" x2="100" y2="150" stroke="rgba(13, 95, 111, 0.5)" stroke-width="2"/>
+          <line x1="150" y1="80" x2="200" y2="180" stroke="rgba(26, 95, 122, 0.5)" stroke-width="2"/>
+          <line x1="100" y1="150" x2="200" y2="180" stroke="rgba(26, 95, 122, 0.5)" stroke-width="2"/>
+        </svg>
+        
+        <!-- Business Growth Chart -->
+        <style>
+          .growth-chart polyline {
+            stroke-dasharray: 500;
+            stroke-dashoffset: 500;
+            animation: chartDraw 6s ease-in-out infinite;
+          }
+          .growth-chart circle {
+            animation: pulseGlow 3s ease-in-out infinite;
+          }
+          .growth-chart circle:nth-child(2) {
+            animation-delay: 0.3s;
+          }
+          .growth-chart circle:nth-child(3) {
+            animation-delay: 0.6s;
+          }
+          .growth-chart circle:nth-child(4) {
+            animation-delay: 0.9s;
+          }
+          .growth-chart circle:nth-child(5) {
+            animation-delay: 1.2s;
+          }
+          .growth-chart {
+            animation: chartFloat 18s ease-in-out infinite;
+          }
+          @keyframes chartFloat {
+            0%, 100% {
+              transform: translateY(0);
+            }
+            50% {
+              transform: translateY(-10px);
+            }
+          }
+        </style>
+        <svg class="growth-chart" style="position: absolute; bottom: 15%; right: 8%; width: 200px; height: 150px; opacity: 0.3; pointer-events: none;">
+          <polyline points="10,140 50,120 90,90 130,70 170,40" fill="none" stroke="rgba(13, 95, 111, 0.7)" stroke-width="3"/>
+          <circle cx="10" cy="140" r="5" fill="rgba(13, 95, 111, 0.8)"/>
+          <circle cx="50" cy="120" r="5" fill="rgba(26, 95, 122, 0.8)"/>
+          <circle cx="90" cy="90" r="5" fill="rgba(139, 115, 85, 0.8)"/>
+          <circle cx="130" cy="70" r="5" fill="rgba(26, 95, 122, 0.8)"/>
+          <circle cx="170" cy="40" r="5" fill="rgba(13, 95, 111, 0.8)"/>
+        </svg>
+        
+        <!-- Strategic Data Flow -->
+        <style>
+          .data-flow path {
+            stroke-dasharray: 10, 5;
+            animation: dashFlow 4s linear infinite;
+          }
+          .data-flow path:nth-child(2) {
+            animation-delay: 0.5s;
+          }
+          @keyframes dashFlow {
+            0% {
+              stroke-dashoffset: 0;
+              opacity: 0.3;
+            }
+            50% {
+              opacity: 0.6;
+            }
+            100% {
+              stroke-dashoffset: 60;
+              opacity: 0.3;
+            }
+          }
+          .data-flow {
+            animation: dataFloat 14s ease-in-out infinite;
+          }
+          @keyframes dataFloat {
+            0%, 100% {
+              transform: translateX(0);
+            }
+            50% {
+              transform: translateX(15px);
+            }
+          }
+        </style>
+        <svg class="data-flow" id="dataFlow1" style="position: absolute; top: 40%; right: 15%; width: 250px; height: 100px; opacity: 0.3; pointer-events: none;">
+          <path d="M 0,50 Q 60,20 125,50 T 250,50" fill="none" stroke="rgba(26, 95, 122, 0.7)" stroke-width="2" stroke-dasharray="5,5"/>
+          <path d="M 0,70 Q 60,90 125,70 T 250,70" fill="none" stroke="rgba(139, 115, 85, 0.7)" stroke-width="2" stroke-dasharray="5,5"/>
+        </svg>
+        
+        <!-- Business Metrics Dashboard -->
+        <style>
+          .analytics-bars rect {
+            transform-origin: bottom;
+            animation: barGrow 5s ease-in-out infinite;
+          }
+          .analytics-bars rect:nth-child(1) {
+            animation-delay: 0s;
+          }
+          .analytics-bars rect:nth-child(2) {
+            animation-delay: 0.5s;
+          }
+          .analytics-bars rect:nth-child(3) {
+            animation-delay: 1s;
+          }
+          .analytics-bars rect:nth-child(4) {
+            animation-delay: 1.5s;
+          }
+          .analytics-bars {
+            animation: barsFloat 16s ease-in-out infinite;
+          }
+          @keyframes barsFloat {
+            0%, 100% {
+              transform: translate(0, 0);
+            }
+            50% {
+              transform: translate(-10px, -15px);
+            }
+          }
+        </style>
+        <svg class="analytics-bars" style="position: absolute; top: 25%; left: 75%; width: 150px; height: 120px; opacity: 0.3; pointer-events: none;">
+          <rect x="10" y="80" width="25" height="40" fill="rgba(13, 95, 111, 0.6)" rx="2" stroke="rgba(13, 95, 111, 0.8)" stroke-width="1"/>
+          <rect x="45" y="60" width="25" height="60" fill="rgba(26, 95, 122, 0.6)" rx="2" stroke="rgba(26, 95, 122, 0.8)" stroke-width="1"/>
+          <rect x="80" y="40" width="25" height="80" fill="rgba(139, 115, 85, 0.6)" rx="2" stroke="rgba(139, 115, 85, 0.8)" stroke-width="1"/>
+          <rect x="115" y="20" width="25" height="100" fill="rgba(26, 95, 122, 0.6)" rx="2" stroke="rgba(26, 95, 122, 0.8)" stroke-width="1"/>
+        </svg>
+        
+        <!-- Visible Professional Ambient Lighting -->
+        <style>
+          .light-source {
+            animation: lightFloat 35s ease-in-out infinite;
+          }
+          .light-source:nth-child(1) {
+            animation-delay: 0s;
+          }
+          .light-source:nth-child(2) {
+            animation-delay: 8s;
+          }
+          .light-source:nth-child(3) {
+            animation-delay: 16s;
+          }
+          .light-source:nth-child(4) {
+            animation-delay: 24s;
+          }
+        </style>
+        <div class="light-source" style="width: 600px; height: 600px; background: radial-gradient(circle, rgba(13, 95, 111, 0.12), transparent); top: 10%; left: 15%; position: absolute; pointer-events: none;"></div>
+        <div class="light-source" style="width: 550px; height: 550px; background: radial-gradient(circle, rgba(139, 115, 85, 0.1), transparent); bottom: 15%; right: 20%; animation-delay: 12s; position: absolute; pointer-events: none;"></div>
+        <div class="light-source" style="width: 500px; height: 500px; background: radial-gradient(circle, rgba(26, 95, 122, 0.1), transparent); top: 50%; left: 50%; transform: translate(-50%, -50%); animation-delay: 24s; position: absolute; pointer-events: none;"></div>
+        <div class="light-source" style="width: 450px; height: 450px; background: radial-gradient(circle, rgba(192, 192, 192, 0.08), transparent); top: 60%; right: 10%; animation-delay: 18s; position: absolute; pointer-events: none;"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="navbar">
+      <div class="navbar-container">
+        <a href="#hero" class="navbar-logo">
+          <span class="logo-icon">🚀</span>
+          <span class="logo-text">Abdelrahman Ibrahim</span>
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav id="desktopNav" class="desktop-nav">
+          <a href="#hero" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#certifications" class="nav-link">Certifications</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        
+        <!-- Hamburger Button -->
+        <button id="hamburgerBtn" class="hamburger-btn" onclick="toggleMenu()" aria-label="Toggle menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </header>
+    
+    <!-- Mobile Menu Backdrop -->
+    <div id="menuBackdrop" class="menu-backdrop"></div>
+    
+    <!-- Mobile Menu -->
+    <nav id="mobileMenu" class="mobile-menu">
+      <div class="mobile-menu-header">
+        <span class="mobile-menu-title">Navigation</span>
+        <button class="close-btn" onclick="toggleMenu()" aria-label="Close menu">✕</button>
+      </div>
+      <div class="mobile-menu-links">
+        <a href="#hero" class="mobile-nav-link">
+          <span class="mobile-nav-icon">🏠</span>
+          <span>Home</span>
+        </a>
+        <a href="#about" class="mobile-nav-link">
+          <span class="mobile-nav-icon">👤</span>
+          <span>About</span>
+        </a>
+        <a href="#experience" class="mobile-nav-link">
+          <span class="mobile-nav-icon">💼</span>
+          <span>Experience</span>
+        </a>
+        <a href="#certifications" class="mobile-nav-link">
+          <span class="mobile-nav-icon">📜</span>
+          <span>Certifications</span>
+        </a>
+        <a href="#skills" class="mobile-nav-link">
+          <span class="mobile-nav-icon">⚡</span>
+          <span>Skills</span>
+        </a>
+        <a href="#contact" class="mobile-nav-link">
+          <span class="mobile-nav-icon">📧</span>
+          <span>Contact</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-label">👋 Welcome to My Portfolio</div>
+            <h1 class="hero-title">AI Engineer &amp; Data-Driven Problem Solver</h1>
+            <p class="hero-subtitle">Transforming complex data into actionable insights with AI and machine learning</p>
+            
+            <div class="hero-metrics">
+                <div class="hero-metric">
+                    <div class="metric-value" data-target="85" data-unit="%">85%</div>
+                    <div class="metric-label">Model Accuracy</div>
+                </div>
+                <div class="hero-metric">
+                    <div class="metric-value" data-target="10000" data-unit="+">10,000+</div>
+                    <div class="metric-label">Records Analyzed</div>
+                </div>
+                <div class="hero-metric">
+                    <div class="metric-value" data-target="3" data-unit="">3</div>
+                    <div class="metric-label">ML Models Deployed</div>
+                </div>
+                <div class="hero-metric">
+                    <div class="metric-value" data-target="5" data-unit="">5</div>
+                    <div class="metric-label">Workflows Optimized</div>
+                </div>
+                <div class="hero-metric">
+                    <div class="metric-value" data-target="100" data-unit="%">100%</div>
+                    <div class="metric-label">On-Time Delivery</div>
+                </div>
+                <div class="hero-metric">
+                    <div class="metric-value" data-target="30" data-unit="%">30%</div>
+                    <div class="metric-label">Efficiency Gains</div>
+                </div>
+            </div>
+            
+            <a href="#contact" class="hero-cta">
+                Let's Connect →
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">About Me</span>
+                <h2 class="section-title">Abdelrahman Ibrahim</h2>
+                <p class="section-description">AI Engineer | Business Analyst | Data-Driven Problem Solver</p>
+            </div>
+            
+            <div class="about-content reveal">
+                <div class="about-image">
+                    <img src="business evening-1339.png" alt="Abdelrahman Ibrahim - Professional Photo" class="about-image-photo">
+                </div>
+                
+                <div class="about-text">
+                    <h3>Building Intelligent Systems</h3>
+                    <p>
+                        Strategic AI and ML engineer with deep expertise in building intelligent systems that drive measurable business value. Combine advanced technical capabilities in machine learning, data analytics, and computer vision with sophisticated business acumen to transform complex data into actionable strategic insights. Proven track record delivering enterprise-level AI solutions that optimize operations and unlock competitive advantages.
+                    </p>
+                    
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <div class="stat-value">85%</div>
+                            <div class="stat-label">Model Accuracy</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">10k+</div>
+                            <div class="stat-label">Records Analyzed</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">5</div>
+                            <div class="stat-label">Workflows Optimized</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value">100%</div>
+                            <div class="stat-label">On-Time Delivery</div>
+                        </div>
+                    </div>
+                    
+                    <div class="languages">
+                        <span class="language-badge">🇪🇬 Arabic (Native)</span>
+                        <span class="language-badge">🇺🇸 English (Fluent)</span>
+                        <span class="language-badge">🇳🇱 Dutch (Conversational)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Career Journey</span>
+                <h2 class="section-title">Professional Experience</h2>
+                <p class="section-description">Building expertise across AI, data analytics, and business transformation</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-company">Alorica EG</div>
+                            <div class="timeline-role">Customer Support Specialist</div>
+                        </div>
+                        <div class="timeline-date">July 2025 – Present</div>
+                    </div>
+                    <ul class="timeline-achievements">
+                        <li>Handle 40–60 customer contacts daily across voice, chat, and email while maintaining quality standards</li>
+                        <li>Achieve 140% Last Call Resolution (LCR) rate — customers don't require follow-up calls after interaction</li>
+                        <li>Maintain channel-specific AHT: 8 min (voice), 12 min (chat), 6 min (email)</li>
+                        <li>Deliver thorough first-contact resolutions through proactive problem-solving</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item reveal">
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-company">Travco Group</div>
+                            <div class="timeline-role">IT Intern</div>
+                        </div>
+                        <div class="timeline-date">July 2024 – August 2024</div>
+                    </div>
+                    <ul class="timeline-achievements">
+                        <li>Resolved 40+ technical support tickets, reducing average resolution time by 25%</li>
+                        <li>Assisted with system upgrades affecting 200+ users with zero downtime</li>
+                        <li>Documented 15+ technical processes to improve knowledge transfer</li>
+                        <li>Collaborated with IT team on infrastructure improvements</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item reveal">
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-company">CIB</div>
+                            <div class="timeline-role">Intern – Digital Transformation &amp; Data Literacy</div>
+                        </div>
+                        <div class="timeline-date">June 2024 – July 2024</div>
+                    </div>
+                    <ul class="timeline-achievements">
+                        <li>Completed 6-week bootcamp in digital transformation and data literacy (ISO 29993:2017 certified)</li>
+                        <li>Analyzed 10,000+ customer records to identify service improvement opportunities</li>
+                        <li>Streamlined 5 customer service workflows</li>
+                        <li>Translated data insights into strategic recommendations for leadership</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item reveal">
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-company">ICTHub Egypt</div>
+                            <div class="timeline-role">AI Trainee</div>
+                        </div>
+                        <div class="timeline-date">January 2024 – February 2024</div>
+                    </div>
+                    <ul class="timeline-achievements">
+                        <li>Completed 50-hour intensive training in AI, machine learning, and computer vision (Grade: Excellent)</li>
+                        <li>Developed 3 machine learning models for real-world business applications</li>
+                        <li>Achieved 85% model accuracy in classification tasks</li>
+                        <li>Gained expertise in predictive modeling and data-driven decision making</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item reveal">
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-company">Enactus MUST</div>
+                            <div class="timeline-role">Project Manager</div>
+                        </div>
+                        <div class="timeline-date">September 2022 – 2025</div>
+                    </div>
+                    <ul class="timeline-achievements">
+                        <li>Managed 3-5 concurrent projects with budgets exceeding EGP 50,000</li>
+                        <li>Led cross-functional teams of 8-12 members, achieving 100% on-time delivery</li>
+                        <li>Increased project efficiency by 30% through agile frameworks and process optimization</li>
+                        <li>Translated organizational goals into actionable execution strategies</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item reveal">
+                    <div class="timeline-header">
+                        <div>
+                            <div class="timeline-company">Proper Business Solutions</div>
+                            <div class="timeline-role">Telemarketing Specialist</div>
+                        </div>
+                        <div class="timeline-date">March 2021 – May 2021</div>
+                    </div>
+                    <ul class="timeline-achievements">
+                        <li>Generated 150+ qualified leads through targeted campaigns</li>
+                        <li>Achieved 20% conversion rate, exceeding 15% target</li>
+                        <li>Met 80-100 daily calls while maintaining quality standards</li>
+                        <li>Built strong customer relationships through effective communication</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Expertise</span>
+                <h2 class="section-title">Skills &amp; Technologies</h2>
+                <p class="section-description">A comprehensive toolkit for AI, data analysis, and business solutions</p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category reveal">
+                    <div class="skill-category-title">
+                        <span class="skill-category-icon">💻</span>
+                        Programming &amp; Analysis
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">Statistical Modeling</span>
+                        <span class="skill-tag">Machine Learning</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category reveal">
+                    <div class="skill-category-title">
+                        <span class="skill-category-icon">📊</span>
+                        Visualization Tools
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Excel (Advanced)</span>
+                        <span class="skill-tag">Google Analytics</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category reveal">
+                    <div class="skill-category-title">
+                        <span class="skill-category-icon">🤖</span>
+                        AI &amp; ML
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Natural Language Processing</span>
+                        <span class="skill-tag">Computer Vision</span>
+                        <span class="skill-tag">Predictive Modeling</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category reveal">
+                    <div class="skill-category-title">
+                        <span class="skill-category-icon">🛠️</span>
+                        Business Tools
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">CRM Systems</span>
+                        <span class="skill-tag">Project Management Software</span>
+                        <span class="skill-tag">Microsoft Office Suite</span>
+                        <span class="skill-tag">Google Workspace</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications Section -->
+    <section class="section" id="education">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Academic Background</span>
+                <h2 class="section-title">Education &amp; Certifications</h2>
+                <p class="section-description">Continuous learning and professional development</p>
+            </div>
+            
+            <div class="education-card reveal">
+                <div class="education-icon">🎓</div>
+                <div class="education-degree">Bachelor of Business Information Systems</div>
+                <div class="education-school">Misr University for Science &amp; Technology (MUST)</div>
+                <div class="education-year">Expected Graduation: 2025</div>
+                <div class="education-distinction">🏆 1st Place Graduation Project</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section" id="certifications">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Professional Development</span>
+                <h2 class="section-title">Certifications</h2>
+                <p class="section-description">Continuous learning across AI, data analysis, and digital marketing</p>
+            </div>
+            
+            <div class="certifications">
+                <div class="cert-category reveal">
+                    <div class="cert-category-title">🤖 AI &amp; Machine Learning</div>
+                    <ul class="cert-list">
+                        <li><strong>ALX AI Career Essentials</strong> – May 2024</li>
+                        <li><strong>Google – The Nuts and Bolts of Machine Learning</strong> – Nov 2025</li>
+                        <li><strong>Google – Get Started with Python</strong> – Nov 2025</li>
+                        <li><strong>ICTHub Egypt – AI Training</strong> – Feb 2024 (50 hours, Grade: Excellent)</li>
+                    </ul>
+                </div>
+                
+                <div class="cert-category reveal">
+                    <div class="cert-category-title">📊 Data Analysis</div>
+                    <ul class="cert-list">
+                        <li><strong>Microsoft &amp; LinkedIn – Career Essentials in Data Analysis</strong> – Dec 2022</li>
+                        <li><strong>Google – Advanced Google Analytics</strong> – 2022</li>
+                        <li><strong>CIB – Digital Transformation &amp; Data Literacy Bootcamp</strong> – July 2024 (ISO 29993:2017 Certified)</li>
+                    </ul>
+                </div>
+                
+                <div class="cert-category reveal">
+                    <div class="cert-category-title">📈 Digital Marketing</div>
+                    <ul class="cert-list">
+                        <li><strong>Google – Digital Marketing Fundamentals</strong> – Aug 2022</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-description">Ready to bring AI-driven solutions to your team</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-methods">
+                    <a href="tel:+201019430868" class="contact-card reveal">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-label">Phone</div>
+                        <div class="contact-value">+20 101 943 0868</div>
+                    </a>
+                    
+                    <a href="mailto:abdelrahmanibrahim.se@gmail.com" class="contact-card reveal">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value">abdelrahmanibrahim.se@gmail.com</div>
+                    </a>
+                    
+                    <a href="https://linkedin.com/in/abdelrahmanibrahim-se" target="_blank" class="contact-card reveal">
+                        <div class="contact-icon">💼</div>
+                        <div class="contact-label">LinkedIn</div>
+                        <div class="contact-value">abdelrahmanibrahim-se</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Abdelrahman Ibrahim. Transforming Data into Business Intelligence.</p>
+    </footer>
+
+    <script>
+        // Advanced Interactive Canvas System
+        const mainCanvas = document.getElementById('main-canvas');
+        const mainCtx = mainCanvas.getContext('2d');
+        const meshCanvas = document.getElementById('mesh-canvas');
+        const meshCtx = meshCanvas.getContext('2d');
+        const cursorGlow = document.getElementById('cursorGlow');
+        
+        let particles = [];
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        let targetMouseX = mouseX;
+        let targetMouseY = mouseY;
+        let meshNodes = [];
+        let trails = [];
+
+        function resizeCanvas() {
+            mainCanvas.width = window.innerWidth;
+            mainCanvas.height = window.innerHeight;
+            meshCanvas.width = window.innerWidth;
+            meshCanvas.height = window.innerHeight;
+            initMeshNodes();
+        }
+
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        // Enhanced Particle System with Trails - MUCH MORE VISIBLE
+        class Particle {
+            constructor() {
+                this.x = Math.random() * mainCanvas.width;
+                this.y = Math.random() * mainCanvas.height;
+                this.size = Math.random() * 4 + 2; // Larger particles
+                this.baseSpeedX = (Math.random() * 1.2 - 0.6);
+                this.baseSpeedY = (Math.random() * 1.2 - 0.6);
+                this.speedX = this.baseSpeedX;
+                this.speedY = this.baseSpeedY;
+                this.vx = 0;
+                this.vy = 0;
+                const colors = [
+                    '13, 95, 111',
+                    '26, 95, 122',
+                    '139, 115, 85',
+                    '192, 192, 192',
+                    '64, 72, 86'
+                ];
+                this.colorRGB = colors[Math.floor(Math.random() * colors.length)];
+                this.alpha = Math.random() * 0.4 + 0.3; // Much more visible
+                this.baseAlpha = this.alpha;
+                this.pulseSpeed = Math.random() * 0.02 + 0.01;
+                this.pulseSize = 0;
+                this.trail = [];
+            }
+
+            update(scrollY) {
+                // Smooth mouse following with magnetic effect
+                const dx = mouseX - this.x;
+                const dy = mouseY - this.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                
+                // Magnetic attraction/repulsion
+                if (distance < 200) {
+                    const force = (200 - distance) / 200;
+                    const angle = Math.atan2(dy, dx);
+                    
+                    // Attract or repel based on particle properties
+                    const attractRepel = this.size > 3 ? -1 : 1;
+                    this.vx += Math.cos(angle) * force * 1.5 * attractRepel;
+                    this.vy += Math.sin(angle) * force * 1.5 * attractRepel;
+                    
+                    // Increase alpha when near cursor - more visible
+                    this.alpha = Math.min(0.8, this.baseAlpha + force * 0.4);
+                } else {
+                    this.alpha = this.baseAlpha;
+                }
+                
+                // Apply velocity with damping
+                this.vx *= 0.92;
+                this.vy *= 0.92;
+                
+                // Scroll influence
+                const scrollInfluence = scrollY * 0.0003;
+                this.speedX = this.baseSpeedX * (1 + Math.sin(scrollInfluence) * 0.3);
+                this.speedY = this.baseSpeedY * (1 + Math.cos(scrollInfluence) * 0.3);
+                
+                // Update position
+                this.x += this.speedX + this.vx;
+                this.y += this.speedY + this.vy;
+                this.pulseSize += this.pulseSpeed;
+                
+                // Add to trail
+                this.trail.push({x: this.x, y: this.y, alpha: this.alpha});
+                if (this.trail.length > 8) this.trail.shift();
+
+                // Wrap around edges
+                if (this.x > mainCanvas.width + 100) this.x = -100;
+                if (this.x < -100) this.x = mainCanvas.width + 100;
+                if (this.y > mainCanvas.height + 100) this.y = -100;
+                if (this.y < -100) this.y = mainCanvas.height + 100;
+            }
+
+            draw() {
+                const pulseEffect = Math.sin(this.pulseSize) * 0.3 + 1;
+                const currentSize = this.size * pulseEffect;
+                
+                // Draw trail
+                for (let i = 0; i < this.trail.length; i++) {
+                    const t = this.trail[i];
+                    const trailAlpha = (i / this.trail.length) * t.alpha * 0.3;
+                    const trailSize = currentSize * (i / this.trail.length);
+                    
+                    mainCtx.fillStyle = `rgba(${this.colorRGB}, ${trailAlpha})`;
+                    mainCtx.beginPath();
+                    mainCtx.arc(t.x, t.y, trailSize, 0, Math.PI * 2);
+                    mainCtx.fill();
+                }
+                
+                // Soft glow
+                const gradient = mainCtx.createRadialGradient(this.x, this.y, 0, this.x, this.y, currentSize * 3);
+                gradient.addColorStop(0, `rgba(${this.colorRGB}, ${this.alpha})`);
+                gradient.addColorStop(0.5, `rgba(${this.colorRGB}, ${this.alpha * 0.4})`);
+                gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
+                mainCtx.fillStyle = gradient;
+                mainCtx.beginPath();
+                mainCtx.arc(this.x, this.y, currentSize * 3, 0, Math.PI * 2);
+                mainCtx.fill();
+                
+                // Draw particle core
+                mainCtx.fillStyle = `rgba(${this.colorRGB}, ${this.alpha})`;
+                mainCtx.beginPath();
+                mainCtx.arc(this.x, this.y, currentSize, 0, Math.PI * 2);
+                mainCtx.fill();
+            }
+        }
+
+        // Animated Business Data Nodes
+        let businessNodes = [];
+        let trendLines = [];
+        let growthBars = [];
+        
+        class BusinessNode {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                this.baseX = x;
+                this.baseY = y;
+                this.radius = Math.random() * 8 + 6;
+                this.pulseSpeed = Math.random() * 0.03 + 0.02;
+                this.pulseOffset = Math.random() * Math.PI * 2;
+                this.glowIntensity = 0;
+                this.connections = [];
+                const colors = ['13, 95, 111', '139, 115, 85', '26, 95, 122'];
+                this.color = colors[Math.floor(Math.random() * colors.length)];
+            }
+            
+            update(time) {
+                this.x = this.baseX + Math.sin(time * 0.001 + this.pulseOffset) * 15;
+                this.y = this.baseY + Math.cos(time * 0.001 + this.pulseOffset) * 15;
+                this.glowIntensity = Math.sin(time * this.pulseSpeed + this.pulseOffset) * 0.3 + 0.5;
+            }
+            
+            draw() {
+                const currentRadius = this.radius * (1 + this.glowIntensity * 0.3);
+                
+                // Outer glow
+                const gradient = mainCtx.createRadialGradient(this.x, this.y, 0, this.x, this.y, currentRadius * 3);
+                gradient.addColorStop(0, `rgba(${this.color}, ${0.6 * this.glowIntensity})`);
+                gradient.addColorStop(0.5, `rgba(${this.color}, ${0.3 * this.glowIntensity})`);
+                gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
+                mainCtx.fillStyle = gradient;
+                mainCtx.beginPath();
+                mainCtx.arc(this.x, this.y, currentRadius * 3, 0, Math.PI * 2);
+                mainCtx.fill();
+                
+                // Node core
+                mainCtx.fillStyle = `rgba(${this.color}, 0.7)`;
+                mainCtx.beginPath();
+                mainCtx.arc(this.x, this.y, currentRadius, 0, Math.PI * 2);
+                mainCtx.fill();
+                
+                // Inner highlight
+                mainCtx.fillStyle = `rgba(255, 255, 255, ${0.4 * this.glowIntensity})`;
+                mainCtx.beginPath();
+                mainCtx.arc(this.x - currentRadius * 0.3, this.y - currentRadius * 0.3, currentRadius * 0.4, 0, Math.PI * 2);
+                mainCtx.fill();
+            }
+        }
+        
+        class TrendLine {
+            constructor(startX, startY) {
+                this.points = [];
+                for (let i = 0; i < 8; i++) {
+                    this.points.push({
+                        x: startX + i * 60,
+                        y: startY - i * 15 + Math.random() * 20
+                    });
+                }
+                this.progress = 0;
+                this.speed = 0.01;
+                this.color = '139, 115, 85';
+            }
+            
+            update() {
+                this.progress += this.speed;
+                if (this.progress > 1) this.progress = 0;
+            }
+            
+            draw() {
+                const visiblePoints = Math.floor(this.points.length * this.progress);
+                if (visiblePoints < 2) return;
+                
+                mainCtx.strokeStyle = `rgba(${this.color}, 0.5)`;
+                mainCtx.lineWidth = 3;
+                mainCtx.shadowColor = `rgba(${this.color}, 0.6)`;
+                mainCtx.shadowBlur = 10;
+                mainCtx.beginPath();
+                mainCtx.moveTo(this.points[0].x, this.points[0].y);
+                
+                for (let i = 1; i < visiblePoints; i++) {
+                    mainCtx.lineTo(this.points[i].x, this.points[i].y);
+                }
+                mainCtx.stroke();
+                mainCtx.shadowBlur = 0;
+                
+                // Draw points
+                for (let i = 0; i < visiblePoints; i++) {
+                    mainCtx.fillStyle = `rgba(${this.color}, 0.7)`;
+                    mainCtx.beginPath();
+                    mainCtx.arc(this.points[i].x, this.points[i].y, 4, 0, Math.PI * 2);
+                    mainCtx.fill();
+                }
+            }
+        }
+        
+        class GrowthBar {
+            constructor(x, y, maxHeight) {
+                this.x = x;
+                this.y = y;
+                this.width = 30;
+                this.maxHeight = maxHeight;
+                this.currentHeight = 0;
+                this.targetHeight = maxHeight;
+                this.speed = 0.02;
+                this.pulsePhase = Math.random() * Math.PI * 2;
+                this.color = '13, 95, 111';
+            }
+            
+            update(time) {
+                this.targetHeight = this.maxHeight * (0.5 + Math.sin(time * 0.001 + this.pulsePhase) * 0.5);
+                this.currentHeight += (this.targetHeight - this.currentHeight) * this.speed;
+            }
+            
+            draw() {
+                const gradient = mainCtx.createLinearGradient(this.x, this.y, this.x, this.y - this.currentHeight);
+                gradient.addColorStop(0, `rgba(${this.color}, 0.3)`);
+                gradient.addColorStop(1, `rgba(${this.color}, 0.6)`);
+                
+                mainCtx.fillStyle = gradient;
+                mainCtx.fillRect(this.x, this.y, this.width, -this.currentHeight);
+                
+                mainCtx.strokeStyle = `rgba(${this.color}, 0.8)`;
+                mainCtx.lineWidth = 2;
+                mainCtx.strokeRect(this.x, this.y, this.width, -this.currentHeight);
+            }
+        }
+        
+        function initBusinessElements() {
+            businessNodes = [];
+            trendLines = [];
+            growthBars = [];
+            
+            // Create business nodes
+            const nodeCount = 12;
+            for (let i = 0; i < nodeCount; i++) {
+                const x = Math.random() * mainCanvas.width;
+                const y = Math.random() * mainCanvas.height;
+                businessNodes.push(new BusinessNode(x, y));
+            }
+            
+            // Create trend lines
+            for (let i = 0; i < 3; i++) {
+                const startX = Math.random() * (mainCanvas.width - 500);
+                const startY = mainCanvas.height * 0.3 + Math.random() * mainCanvas.height * 0.4;
+                trendLines.push(new TrendLine(startX, startY));
+            }
+            
+            // Create growth bars
+            const barCount = 5;
+            const barSpacing = 50;
+            const startX = mainCanvas.width - (barCount * barSpacing) - 100;
+            const baseY = mainCanvas.height * 0.7;
+            for (let i = 0; i < barCount; i++) {
+                const maxHeight = 80 + Math.random() * 100;
+                growthBars.push(new GrowthBar(startX + i * barSpacing, baseY, maxHeight));
+            }
+        }
+        
+        function initParticles() {
+            particles = [];
+            const numberOfParticles = Math.min(50, Math.floor(mainCanvas.width * mainCanvas.height / 20000));
+            for (let i = 0; i < numberOfParticles; i++) {
+                particles.push(new Particle());
+            }
+        }
+        
+        // Animate neural network nodes
+        function animateNeuralNetworks() {
+            const neuralNets = document.querySelectorAll('.neural-network circle');
+            neuralNets.forEach((circle, index) => {
+                const baseR = parseFloat(circle.getAttribute('r'));
+                setInterval(() => {
+                    const newR = baseR + Math.sin(Date.now() * 0.001 + index) * 2;
+                    circle.setAttribute('r', newR);
+                }, 50);
+            });
+        }
+        
+        // Animate data flow lines
+        function animateDataFlows() {
+            const dataFlows = document.querySelectorAll('.data-flow path');
+            dataFlows.forEach((path, index) => {
+                let offset = 0;
+                setInterval(() => {
+                    offset += 0.5;
+                    path.style.strokeDashoffset = offset;
+                }, 30);
+            });
+        }
+        
+        // Animated Gradient Mesh System
+        class MeshNode {
+            constructor(x, y) {
+                this.baseX = x;
+                this.baseY = y;
+                this.x = x;
+                this.y = y;
+                this.vx = 0;
+                this.vy = 0;
+                this.offset = Math.random() * Math.PI * 2;
+            }
+            
+            update(time) {
+                // Flowing motion
+                this.x = this.baseX + Math.sin(time * 0.0005 + this.offset) * 30;
+                this.y = this.baseY + Math.cos(time * 0.0007 + this.offset) * 30;
+                
+                // Mouse deformation
+                const dx = mouseX - this.x;
+                const dy = mouseY - this.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                
+                if (distance < 200) {
+                    const force = (200 - distance) / 200;
+                    const angle = Math.atan2(dy, dx);
+                    this.vx += Math.cos(angle) * force * 3;
+                    this.vy += Math.sin(angle) * force * 3;
+                }
+                
+                this.vx *= 0.85;
+                this.vy *= 0.85;
+                this.x += this.vx;
+                this.y += this.vy;
+            }
+        }
+        
+        function initMeshNodes() {
+            meshNodes = [];
+            const spacing = 100;
+            const cols = Math.ceil(meshCanvas.width / spacing) + 1;
+            const rows = Math.ceil(meshCanvas.height / spacing) + 1;
+            
+            for (let i = 0; i < cols; i++) {
+                for (let j = 0; j < rows; j++) {
+                    meshNodes.push(new MeshNode(i * spacing, j * spacing));
+                }
+            }
+        }
+        
+        function drawMesh(time) {
+            meshCtx.clearRect(0, 0, meshCanvas.width, meshCanvas.height);
+            
+            // Update nodes
+            meshNodes.forEach(node => node.update(time));
+            
+            // Draw mesh lines
+            const spacing = 100;
+            const cols = Math.ceil(meshCanvas.width / spacing) + 1;
+            
+            const cycle = (time * 0.0003) % 3;
+            let r, g, b;
+            if (cycle < 1) {
+                r = 13; g = 95; b = 111;
+            } else if (cycle < 2) {
+                r = 139; g = 115; b = 85;
+            } else {
+                r = 26; g = 95; b = 122;
+            }
+            const opacity = 0.08 + Math.sin(time * 0.001) * 0.04; // More visible mesh
+            meshCtx.strokeStyle = `rgba(${r}, ${g}, ${b}, ${opacity})`;
+            meshCtx.lineWidth = 1.5;
+            meshCtx.shadowColor = `rgba(${r}, ${g}, ${b}, 0.3)`;
+            meshCtx.shadowBlur = 8;
+            
+            // Horizontal lines
+            for (let j = 0; j < Math.ceil(meshCanvas.height / spacing) + 1; j++) {
+                meshCtx.beginPath();
+                for (let i = 0; i < cols; i++) {
+                    const node = meshNodes[i * (Math.ceil(meshCanvas.height / spacing) + 1) + j];
+                    if (node) {
+                        if (i === 0) meshCtx.moveTo(node.x, node.y);
+                        else meshCtx.lineTo(node.x, node.y);
+                    }
+                }
+                meshCtx.stroke();
+            }
+            
+            // Vertical lines
+            for (let i = 0; i < cols; i++) {
+                meshCtx.beginPath();
+                for (let j = 0; j < Math.ceil(meshCanvas.height / spacing) + 1; j++) {
+                    const node = meshNodes[i * (Math.ceil(meshCanvas.height / spacing) + 1) + j];
+                    if (node) {
+                        if (j === 0) meshCtx.moveTo(node.x, node.y);
+                        else meshCtx.lineTo(node.x, node.y);
+                    }
+                }
+                meshCtx.stroke();
+            }
+        }
+
+        function connectParticles() {
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+
+                    if (distance < 180) {
+                        const opacity = 0.25 * (1 - distance / 180); // More visible connections
+                        const gradient = mainCtx.createLinearGradient(
+                            particles[i].x, particles[i].y,
+                            particles[j].x, particles[j].y
+                        );
+                        gradient.addColorStop(0, `rgba(${particles[i].colorRGB}, ${opacity})`);
+                        gradient.addColorStop(1, `rgba(${particles[j].colorRGB}, ${opacity})`);
+                        mainCtx.strokeStyle = gradient;
+                        mainCtx.lineWidth = 2; // Thicker lines
+                        mainCtx.shadowColor = `rgba(${particles[i].colorRGB}, 0.3)`;
+                        mainCtx.shadowBlur = 5;
+                        mainCtx.beginPath();
+                        mainCtx.moveTo(particles[i].x, particles[i].y);
+                        mainCtx.lineTo(particles[j].x, particles[j].y);
+                        mainCtx.stroke();
+                        mainCtx.shadowBlur = 0;
+                    }
+                }
+            }
+        }
+        
+        function connectBusinessNodes() {
+            for (let i = 0; i < businessNodes.length; i++) {
+                for (let j = i + 1; j < businessNodes.length; j++) {
+                    const dx = businessNodes[i].x - businessNodes[j].x;
+                    const dy = businessNodes[i].y - businessNodes[j].y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+                    
+                    if (distance < 250) {
+                        const opacity = 0.3 * (1 - distance / 250);
+                        mainCtx.strokeStyle = `rgba(26, 95, 122, ${opacity})`;
+                        mainCtx.lineWidth = 2;
+                        mainCtx.shadowColor = 'rgba(26, 95, 122, 0.4)';
+                        mainCtx.shadowBlur = 8;
+                        mainCtx.beginPath();
+                        mainCtx.moveTo(businessNodes[i].x, businessNodes[i].y);
+                        mainCtx.lineTo(businessNodes[j].x, businessNodes[j].y);
+                        mainCtx.stroke();
+                        mainCtx.shadowBlur = 0;
+                    }
+                }
+            }
+        }
+
+        let scrollY = 0;
+        window.addEventListener('scroll', () => {
+            scrollY = window.pageYOffset;
+        });
+        
+        let animationTime = 0;
+        function animate() {
+            animationTime += 16;
+            
+            // Clear main canvas
+            mainCtx.clearRect(0, 0, mainCanvas.width, mainCanvas.height);
+            
+            // Smooth mouse interpolation
+            mouseX += (targetMouseX - mouseX) * 0.1;
+            mouseY += (targetMouseY - mouseY) * 0.1;
+            
+            // Draw mesh
+            drawMesh(animationTime);
+            
+            // Draw business elements FIRST (background layer)
+            trendLines.forEach(line => {
+                line.update();
+                line.draw();
+            });
+            
+            growthBars.forEach(bar => {
+                bar.update(animationTime);
+                bar.draw();
+            });
+            
+            // Update and draw business nodes with connections
+            businessNodes.forEach(node => {
+                node.update(animationTime);
+            });
+            connectBusinessNodes();
+            businessNodes.forEach(node => {
+                node.draw();
+            });
+            
+            // Update and draw particles
+            particles.forEach(particle => {
+                particle.update(scrollY);
+                particle.draw();
+            });
+            
+            // Connect particles
+            connectParticles();
+            
+            requestAnimationFrame(animate);
+        }
+
+        initParticles();
+        initMeshNodes();
+        initBusinessElements();
+        animate();
+        animateNeuralNetworks();
+        animateDataFlows();
+        animateWaves();
+        animateRotatingShapes();
+        
+        // Animated Flowing Waves Function
+        function animateWaves() {
+            const wave1 = document.getElementById('wave1');
+            const wave2 = document.getElementById('wave2');
+            const wave3 = document.getElementById('wave3');
+            
+            if (!wave1 || !wave2 || !wave3) return;
+            
+            let waveOffset1 = 0;
+            let waveOffset2 = 0;
+            let waveOffset3 = 0;
+            
+            function updateWaves() {
+                waveOffset1 += 0.01;
+                waveOffset2 += 0.015;
+                waveOffset3 += 0.008;
+                
+                const width = window.innerWidth;
+                const height = 300;
+                const amplitude1 = 40;
+                const amplitude2 = 30;
+                const amplitude3 = 50;
+                const frequency = 0.01;
+                
+                let path1 = `M 0 ${height}`;
+                let path2 = `M 0 ${height}`;
+                let path3 = `M 0 ${height}`;
+                
+                for (let x = 0; x <= width; x += 10) {
+                    const y1 = Math.sin(x * frequency + waveOffset1) * amplitude1 + height - 100;
+                    const y2 = Math.sin(x * frequency + waveOffset2) * amplitude2 + height - 70;
+                    const y3 = Math.sin(x * frequency + waveOffset3) * amplitude3 + height - 40;
+                    
+                    path1 += ` L ${x} ${y1}`;
+                    path2 += ` L ${x} ${y2}`;
+                    path3 += ` L ${x} ${y3}`;
+                }
+                
+                path1 += ` L ${width} ${height} Z`;
+                path2 += ` L ${width} ${height} Z`;
+                path3 += ` L ${width} ${height} Z`;
+                
+                wave1.setAttribute('d', path1);
+                wave2.setAttribute('d', path2);
+                wave3.setAttribute('d', path3);
+                
+                requestAnimationFrame(updateWaves);
+            }
+            
+            updateWaves();
+        }
+        
+        // Rotating Geometric Shapes
+        function animateRotatingShapes() {
+            const rect1 = document.getElementById('rotatingRect1');
+            const circle1 = document.getElementById('rotatingCircle1');
+            const poly1 = document.getElementById('rotatingPoly1');
+            const rect2 = document.getElementById('rotatingRect2');
+            const circle2 = document.getElementById('rotatingCircle2');
+            
+            let rotation1 = 0;
+            let rotation2 = 0;
+            let scale1 = 1;
+            let scale2 = 1;
+            
+            function rotateShapes() {
+                rotation1 += 0.3;
+                rotation2 -= 0.4;
+                scale1 = 1 + Math.sin(Date.now() * 0.001) * 0.15;
+                scale2 = 1 + Math.cos(Date.now() * 0.0012) * 0.12;
+                
+                if (rect1) rect1.setAttribute('transform', `rotate(${rotation1} 80 80) scale(${scale1})`);
+                if (circle1) circle1.setAttribute('r', 40 + Math.sin(Date.now() * 0.002) * 5);
+                if (poly1) poly1.setAttribute('transform', `rotate(${-rotation1} 80 80) scale(${scale1})`);
+                if (rect2) rect2.setAttribute('transform', `rotate(${rotation2} 65 65) scale(${scale2})`);
+                if (circle2) circle2.setAttribute('r', 35 + Math.cos(Date.now() * 0.0018) * 4);
+                
+                requestAnimationFrame(rotateShapes);
+            }
+            
+            rotateShapes();
+        }
+
+        // Enhanced mouse tracking with cursor effects - MORE TRAILS
+        let lastTrailTime = 0;
+        document.addEventListener('mousemove', (e) => {
+            targetMouseX = e.clientX;
+            targetMouseY = e.clientY;
+
+            // Cursor glow effect - brighter
+            cursorGlow.style.left = e.clientX + 'px';
+            cursorGlow.style.top = e.clientY + 'px';
+            cursorGlow.style.opacity = '0.9';
+            
+            // Create cursor trails - more frequent
+            const now = Date.now();
+            if (now - lastTrailTime > 20) {
+                lastTrailTime = now;
+                createCursorTrail(e.clientX, e.clientY);
+            }
+        });
+        
+        document.addEventListener('mouseleave', () => {
+            cursorGlow.style.opacity = '0';
+        });
+        
+        function createCursorTrail(x, y) {
+            const trail = document.createElement('div');
+            trail.className = 'cursor-trail';
+            trail.style.left = x + 'px';
+            trail.style.top = y + 'px';
+            
+            // Random muted colors for trails
+            const colors = [
+                'rgba(13, 95, 111, 0.3)',
+                'rgba(26, 95, 122, 0.3)',
+                'rgba(139, 115, 85, 0.3)',
+                'rgba(192, 192, 192, 0.2)'
+            ];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            trail.style.background = `radial-gradient(circle, ${randomColor}, transparent)`;
+            
+            document.body.appendChild(trail);
+            setTimeout(() => trail.remove(), 800);
+        }
+
+        window.addEventListener('resize', () => {
+            resizeCanvas();
+            initParticles();
+            initMeshNodes();
+            initBusinessElements();
+        });
+
+        // Counter Animation - FIXED for mobile
+        function animateCounter(element, target, duration = 2000) {
+            const start = 0;
+            const startTime = performance.now();
+            const unit = element.getAttribute('data-unit') || '';
+
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const current = Math.floor(progress * target);
+
+                if (target >= 1000) {
+                    element.textContent = current.toLocaleString() + unit;
+                } else {
+                    element.textContent = current + unit;
+                }
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                } else {
+                    // Ensure final value is exact
+                    if (target >= 1000) {
+                        element.textContent = target.toLocaleString() + unit;
+                    } else {
+                        element.textContent = target + unit;
+                    }
+                }
+            }
+
+            requestAnimationFrame(update);
+        }
+
+        // Trigger counter animations - WORKS ON ALL DEVICES
+        function startCounterAnimations() {
+            const counters = document.querySelectorAll('.metric-value[data-target]');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                animateCounter(counter, target, 2000);
+            });
+        }
+        
+        // Start animations immediately
+        setTimeout(startCounterAnimations, 500);
+
+
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Enhanced Reveal Animation on Scroll - IMMEDIATE VISIBILITY
+        const revealElements = document.querySelectorAll('.reveal');
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        const certCategories = document.querySelectorAll('.cert-category');
+        
+        // Make everything visible immediately on load
+        function makeEverythingVisible() {
+            revealElements.forEach((element) => {
+                element.classList.add('active', 'reveal-active');
+                element.style.opacity = '1';
+                element.style.transform = 'translateY(0)';
+            });
+            
+            timelineItems.forEach((item) => {
+                item.classList.add('reveal-active');
+                item.style.opacity = '1';
+                item.style.transform = 'translateX(0)';
+            });
+            
+            certCategories.forEach((cert) => {
+                cert.classList.add('reveal-active');
+                cert.style.opacity = '1';
+                cert.style.transform = 'translateY(0)';
+            });
+        }
+        
+        const revealOnScroll = () => {
+            const windowHeight = window.innerHeight;
+            const revealPoint = 120;
+            
+            revealElements.forEach((element, index) => {
+                const elementTop = element.getBoundingClientRect().top;
+                
+                if (elementTop < windowHeight - revealPoint) {
+                    setTimeout(() => {
+                        element.classList.add('active', 'reveal-active');
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }, index * 80);
+                }
+            });
+            
+            timelineItems.forEach((item, index) => {
+                const itemTop = item.getBoundingClientRect().top;
+                if (itemTop < windowHeight - revealPoint) {
+                    setTimeout(() => {
+                        item.classList.add('reveal-active');
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateX(0)';
+                    }, index * 120);
+                }
+            });
+            
+            certCategories.forEach((cert, index) => {
+                const certTop = cert.getBoundingClientRect().top;
+                if (certTop < windowHeight - revealPoint) {
+                    setTimeout(() => {
+                        cert.classList.add('reveal-active');
+                        cert.style.opacity = '1';
+                        cert.style.transform = 'translateY(0)';
+                    }, index * 150);
+                }
+            });
+        };
+
+        // Make everything visible immediately
+        makeEverythingVisible();
+        window.addEventListener('scroll', revealOnScroll);
+        setTimeout(revealOnScroll, 100);
+
+        // HAMBURGER MENU - WORKING IMPLEMENTATION
+        function toggleMenu() {
+          const menu = document.getElementById('mobileMenu');
+          const backdrop = document.getElementById('menuBackdrop');
+          const hamburger = document.getElementById('hamburgerBtn');
+          
+          menu.classList.toggle('open');
+          backdrop.classList.toggle('active');
+          hamburger.classList.toggle('active');
+          
+          // Prevent body scroll when menu is open
+          if (menu.classList.contains('open')) {
+            document.body.style.overflow = 'hidden';
+          } else {
+            document.body.style.overflow = '';
+          }
+        }
+        
+        // Close menu when clicking a link and navigate
+        function setupMobileNavLinks() {
+          const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+          mobileLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+              e.preventDefault();
+              const targetId = this.getAttribute('href');
+              const targetSection = document.querySelector(targetId);
+              
+              // Close menu first
+              toggleMenu();
+              
+              // Then navigate after a short delay for smooth animation
+              setTimeout(() => {
+                if (targetSection) {
+                  targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                  });
+                }
+              }, 300);
+            });
+          });
+        }
+        
+        // Setup mobile navigation on load
+        setupMobileNavLinks();
+        
+        // Add scroll effect to navbar
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+          const navbar = document.querySelector('.navbar');
+          const currentScroll = window.pageYOffset;
+          
+          if (currentScroll > 100) {
+            navbar.classList.add('scrolled');
+          } else {
+            navbar.classList.remove('scrolled');
+          }
+          
+          lastScroll = currentScroll;
+        });
+        
+        // Handle escape key to close menu
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            const menu = document.getElementById('mobileMenu');
+            if (menu.classList.contains('open')) {
+              toggleMenu();
+            }
+          }
+        });
+        
+        // Close menu when clicking backdrop
+        document.getElementById('menuBackdrop').addEventListener('click', () => {
+          const menu = document.getElementById('mobileMenu');
+          if (menu.classList.contains('open')) {
+            toggleMenu();
+          }
+        });
+        
+        // Highlight active nav link on scroll
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
+        
+        window.addEventListener('scroll', () => {
+          let current = '';
+          sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.pageYOffset >= sectionTop - 200) {
+              current = section.getAttribute('id');
+            }
+          });
+          
+          navLinks.forEach(link => {
+            link.style.color = '';
+            if (link.getAttribute('href') === `#${current}`) {
+              link.style.color = 'var(--color-primary)';
+            }
+          });
+        });
+
+        // Professional parallax effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = scrolled / maxScroll;
+            
+            // Animate gradient orbs
+            const orbs = document.querySelectorAll('.gradient-orb');
+            orbs.forEach((orb, index) => {
+                const speed = (index + 1) * 0.15;
+                const rotation = scrolled * 0.08;
+                const scale = 1 + Math.sin(scrollPercent * Math.PI * 2 + index) * 0.2;
+                orb.style.transform = `translateY(${scrolled * speed}px) rotate(${rotation}deg) scale(${scale})`;
+            });
+            
+            // Animate floating shapes
+            const shapes = document.querySelectorAll('.floating-shape');
+            shapes.forEach((shape, index) => {
+                const speed = (index + 1) * 0.08;
+                const rotation = scrolled * 0.15 * (index % 2 === 0 ? 1 : -1);
+                const sway = Math.sin(scrolled * 0.01 + index) * 30;
+                shape.style.transform = `translate(${sway}px, ${scrolled * speed}px) rotate(${rotation}deg)`;
+            });
+            
+            // Animate light orbs
+            const lightOrbs = document.querySelectorAll('.light-orb');
+            lightOrbs.forEach((orb, index) => {
+                const speed = 0.05 + index * 0.02;
+                const offset = Math.sin(scrolled * 0.005 + index) * 50;
+                orb.style.transform = `translate(${offset}px, ${scrolled * speed}px) scale(${1 + scrollPercent * 0.3})`;
+            });
+            
+
+            
+        });
+
+        // Professional scroll progress indicator
+        const createScrollIndicator = () => {
+            const indicator = document.createElement('div');
+            indicator.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 2px;
+                background: linear-gradient(90deg, var(--color-deep-teal), var(--color-brushed-gold), var(--color-steel-blue));
+                z-index: 9999;
+                transition: width 0.1s ease;
+            `;
+            document.body.appendChild(indicator);
+
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                indicator.style.width = scrolled + '%';
+            });
+        };
+
+        createScrollIndicator();
+
+        // FORCE ALL CONTENT VISIBLE IMMEDIATELY
+        function forceAllVisible() {
+            const allElements = document.querySelectorAll('.reveal, .hero-content, .section, .timeline-item, .cert-category, .hero-metric, .stat-card, .skill-category');
+            allElements.forEach(el => {
+                el.style.opacity = '1';
+                el.style.visibility = 'visible';
+                el.style.transform = 'translateY(0) translateX(0)';
+                el.classList.add('active', 'reveal-active');
+            });
+        }
+        
+        // Ensure all content is visible on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            forceAllVisible();
+            setTimeout(startCounterAnimations, 300);
+        });
+
+        // Enhanced visibility check on load
+        window.addEventListener('load', () => {
+            forceAllVisible();
+            setTimeout(startCounterAnimations, 200);
+        });
+        
+        // Backup - force visible after short delay
+        setTimeout(forceAllVisible, 100);
+
+        // Professional button interaction
+        const ctaButton = document.querySelector('.hero-cta');
+        if (ctaButton) {
+            ctaButton.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.classList.add('ripple');
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => ripple.remove(), 600);
+            });
+        }
+        
+        // Professional data visualization animation
+        function animateDataMetrics() {
+            const metrics = document.querySelectorAll('.analytics-bars rect');
+            metrics.forEach((rect, index) => {
+                setInterval(() => {
+                    const currentHeight = parseFloat(rect.getAttribute('height'));
+                    const newHeight = currentHeight + Math.sin(Date.now() * 0.0005 + index) * 2;
+                    rect.setAttribute('height', Math.max(20, newHeight));
+                }, 100);
+            });
+        }
+        
+        animateDataMetrics();
+        
+
+        
+        // Professional card hover effects
+        const cards = document.querySelectorAll('.timeline-item, .skill-category, .cert-category, .contact-card, .hero-metric, .stat-card, .education-card');
+        cards.forEach(card => {
+            card.style.position = 'relative';
+        });
+        
+
+    </script>
+</body>
+</html>
